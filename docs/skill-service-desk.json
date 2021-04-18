@@ -1,0 +1,1427 @@
+{
+  "intents": [
+    {
+      "intent": "abrir_chamado",
+      "examples": [
+        {
+          "text": "estou com um problema"
+        },
+        {
+          "text": "Gostaria de abrir um chamado"
+        },
+        {
+          "text": "preciso de ajuda aqui"
+        },
+        {
+          "text": "quero abrir um chamado"
+        },
+        {
+          "text": "quero abrir um helpdesk"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "abrir_rnc",
+      "examples": [
+        {
+          "text": "abre uma rnc pra mim"
+        },
+        {
+          "text": "esta tudo errado"
+        },
+        {
+          "text": "fiz merda"
+        },
+        {
+          "text": "matei a peça"
+        },
+        {
+          "text": "quero abrir uma rnc"
+        }
+      ],
+      "description": "Relatório de Não-Conformidade "
+    },
+    {
+      "intent": "definir_borracha",
+      "examples": [
+        {
+          "text": "preciso definir a borracha do estator"
+        },
+        {
+          "text": "qual a borracha"
+        },
+        {
+          "text": "qual é o elastomero"
+        },
+        {
+          "text": "quero definir o elastomero"
+        },
+        {
+          "text": "quero saber qual borracha usar"
+        },
+        {
+          "text": "quero saber qual elastomero"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "despedida",
+      "examples": [
+        {
+          "text": "ate"
+        },
+        {
+          "text": "falow"
+        },
+        {
+          "text": "nao quero mais falar com vc"
+        },
+        {
+          "text": "se manda"
+        },
+        {
+          "text": "tchau"
+        },
+        {
+          "text": "valeu"
+        },
+        {
+          "text": "xau"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "falar_com_ti",
+      "examples": [
+        {
+          "text": "me direcione para uma pessoa"
+        },
+        {
+          "text": "nao quero falar com vc"
+        },
+        {
+          "text": "nao quero falar com você"
+        },
+        {
+          "text": "quero falar com alguem da informatica"
+        },
+        {
+          "text": "quero falar com alguem da ti"
+        },
+        {
+          "text": "quero falar com alguem da tic"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "quem_sou_eu",
+      "examples": [
+        {
+          "text": "de onde você veio"
+        },
+        {
+          "text": "que dia você nasceu"
+        },
+        {
+          "text": "quem é seu pai"
+        },
+        {
+          "text": "quem é sua mae ?"
+        },
+        {
+          "text": "quem é vc"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "saldo_ferias",
+      "examples": [
+        {
+          "text": "dias de ferias"
+        },
+        {
+          "text": "preciso de ferias"
+        },
+        {
+          "text": "preciso de uma folga"
+        },
+        {
+          "text": "qual meu saldo de ferias"
+        },
+        {
+          "text": "quantos dias de ferias eu tenho"
+        },
+        {
+          "text": "quero uma folga"
+        },
+        {
+          "text": "tenho ferias ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "saudacao",
+      "examples": [
+        {
+          "text": "boa noite"
+        },
+        {
+          "text": "boa tarde"
+        },
+        {
+          "text": "bom dia"
+        },
+        {
+          "text": "oi"
+        },
+        {
+          "text": "ola"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "cadastro",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "cadastro_syntax",
+          "patterns": [
+            "\\d{4}"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "condicao_borracha",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "meio",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "temperatura",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "departamento",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "engenharia",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "manutencao",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "rh",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "tic",
+          "synonyms": [
+            "informatica",
+            "it",
+            "ti"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "ferias",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "colaborador",
+          "patterns": [
+            "\\d{4}"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "meio",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "aditivo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "agua",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "amido cozido",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "lodo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "polpa de fruta",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "peca_item",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "numero_item",
+          "patterns": [
+            "([a-zA-Z]{3})*(\\d{4})"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "peca_nome",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "base",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "boca de recalque",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "corpo de bomba",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "estator",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "lanterna",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "mancal",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "motor",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "redutor",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "rotor",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "problema",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "problema_tipo",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "conexao",
+          "synonyms": [
+            "conecta"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "lentidao",
+          "synonyms": [
+            "devagar",
+            "lento",
+            "lesma"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "travar",
+          "synonyms": [
+            "congelado",
+            "parou",
+            "travado"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "rnc_causas",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "desenho errado",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "medida incorreta",
+          "synonyms": [
+            "medida errada"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "solda com problema",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "saudacao_formal",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Boa noite",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Boa tarde",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bom dia",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "software",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "autocad",
+          "synonyms": [
+            "cad"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "inventor",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "pdm",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "vault",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://us-south.functions.appdomain.cloud/api/v1/web/leandro.starke%40gmail.com_dev/default/api-mock.json",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá. Como posso te ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_4_1618658581515",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1618437091690",
+      "context": {
+        "cadastro": "@cadastro"
+      },
+      "conditions": "@cadastro",
+      "event_name": "input",
+      "dialog_node": "handler_1_1618437091711"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Informe seu cadastro:"
+          ],
+          "selection_policy": "sequential"
+        },
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informe seu cadastro:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1618444706793",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1618444706814",
+      "previous_sibling": "handler_3_1618444706814"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_1_1618659535259",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1618660501076",
+      "previous_sibling": "slot_1_1618661389127"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_9_1618303552344",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1618665042296",
+      "previous_sibling": "node_4_1618670525894"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Informe seu cadastro:"
+          ],
+          "selection_policy": "sequential"
+        },
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informe seu cadastro:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1618437091690",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1618437091711",
+      "previous_sibling": "handler_1_1618437091711"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1618444706793",
+      "context": {
+        "cadastro": "@ferias"
+      },
+      "conditions": "@ferias",
+      "event_name": "input",
+      "dialog_node": "handler_3_1618444706814"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informe o item da peça:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_1_1618661389127",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1618661389128",
+      "previous_sibling": "handler_7_1618661389128"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1618661389127",
+      "context": {
+        "peca_item": "@peca_item"
+      },
+      "conditions": "@peca_item",
+      "event_name": "input",
+      "dialog_node": "handler_7_1618661389128"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1618665042799",
+      "context": {
+        "meio": "@meio"
+      },
+      "conditions": "@meio",
+      "event_name": "input",
+      "dialog_node": "handler_7_1618665042813"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informe o meio a ser bombeado:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_5_1618665042799",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1618665042813",
+      "previous_sibling": "handler_7_1618665042813"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Feito $webhook_result_1.nome. Abri um chamado para para $departamento. Tipo de problema: $problema_tipo no software $software. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1618303077368",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1618679110502"
+      },
+      "conditions": "true",
+      "dialog_node": "node_10_1618303360414",
+      "previous_sibling": "node_3_1618348008092"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem! Irei encaminha-lo para um humano."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#falar_com_ti",
+      "dialog_node": "node_10_1618303895684",
+      "previous_sibling": "node_9_1618303552344"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informe o item da peça:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1618658581515",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_1_1618659535259"
+      },
+      "conditions": "!$numero_item",
+      "dialog_node": "node_10_1618661694894",
+      "previous_sibling": "node_3_1618662216002"
+    },
+    {
+      "type": "standard",
+      "parent": "node_4_1618658581515",
+      "context": {
+        "peca_nome": "<? @peca_nome.literal ?>"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_8_1618664336618"
+      },
+      "conditions": "@peca_nome",
+      "dialog_node": "node_10_1618662164017",
+      "previous_sibling": "node_1_1618659535259"
+    },
+    {
+      "type": "frame",
+      "parent": "node_5_1618303077368",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "cadastro": "<? @cadastro.literal ?>"
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_1_1618347349846"
+      },
+      "conditions": "@cadastro",
+      "dialog_node": "node_1_1618303171355",
+      "previous_sibling": "node_5_1618303166507"
+    },
+    {
+      "type": "standard",
+      "parent": "node_5_1618303077368",
+      "context": {
+        "problema_tipo": "<? @problema_tipo.literal ?>"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_7_1618347992938"
+      },
+      "conditions": "@problema_tipo",
+      "dialog_node": "node_1_1618347349846",
+      "previous_sibling": "node_1_1618303171355"
+    },
+    {
+      "type": "frame",
+      "parent": "node_9_1618303577929",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "cadastro": "<? @ferias.literal?>"
+          },
+          "result_variable": "webhook_result_2"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_7_1618348588067"
+      },
+      "conditions": "@ferias",
+      "dialog_node": "node_1_1618348512862"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1618658581515",
+      "context": {
+        "numero_item": "<? @peca_item.literal ?>"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_10_1618662164017"
+      },
+      "conditions": "@peca_item",
+      "dialog_node": "node_1_1618659535259"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Defina o seu problema para mim."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1618303077368",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1618303166507"
+      },
+      "conditions": "!$problema_tipo",
+      "dialog_node": "node_2_1618347367461",
+      "previous_sibling": "node_7_1618306093807"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Fui criada através de um trabalho da disciplina de Chatbots no curso de Data Science na Furb. Meu criador é o Leandro Starke."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#quem_sou_eu",
+      "dialog_node": "node_2_1618348320069",
+      "previous_sibling": "node_9_1618349608125"
+    },
+    {
+      "type": "standard",
+      "title": "Saudação",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#saudacao",
+      "dialog_node": "node_3_1618216313066",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O problema que você está tendo é em algum software ? Qual ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1618303077368",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1618303166507"
+      },
+      "conditions": "!$software",
+      "dialog_node": "node_3_1618348008092",
+      "previous_sibling": "node_2_1618347367461"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito bem. Para abrir uma RNC preciso de algumas informações. <br> Informe o nome da peça:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1618658581515",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_1_1618659535259"
+      },
+      "conditions": "!$peca_nome",
+      "dialog_node": "node_3_1618662216002",
+      "previous_sibling": "node_8_1618664336618"
+    },
+    {
+      "type": "standard",
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#abrir_rnc",
+      "dialog_node": "node_4_1618658581515",
+      "previous_sibling": "node_10_1618303895684"
+    },
+    {
+      "type": "standard",
+      "title": "zerar variavel meio",
+      "parent": "node_9_1618303552344",
+      "context": {
+        "meio": null
+      },
+      "conditions": "false",
+      "dialog_node": "node_4_1618670525894"
+    },
+    {
+      "type": "standard",
+      "title": "abrir helpdesk",
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#abrir_chamado",
+      "dialog_node": "node_5_1618303077368",
+      "previous_sibling": "node_2_1618348320069"
+    },
+    {
+      "type": "standard",
+      "title": "departamento",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_5_1618303077368",
+      "context": {
+        "departamento": "<? @departamento ?>"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_1_1618303171355"
+      },
+      "conditions": "@departamento",
+      "dialog_node": "node_5_1618303166507"
+    },
+    {
+      "type": "standard",
+      "title": "zera variaveis",
+      "parent": "node_10_1618303360414",
+      "context": {
+        "cadastro": null,
+        "departamento": null,
+        "problema_tipo": null
+      },
+      "conditions": "false",
+      "dialog_node": "node_6_1618679110502"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informe o cadastro do solicitante:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1618303077368",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1618303166507"
+      },
+      "conditions": "!$cadastro",
+      "dialog_node": "node_7_1618306093807",
+      "previous_sibling": "node_9_1618306087939"
+    },
+    {
+      "type": "standard",
+      "parent": "node_5_1618303077368",
+      "context": {
+        "software": "<? @software.literal ?>"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_9_1618306087939"
+      },
+      "conditions": "@software",
+      "dialog_node": "node_7_1618347992938",
+      "previous_sibling": "node_1_1618347349846"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Me diga qual seu cadastro para que eu possa fazer a consulta para vc!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1618303577929",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_1_1618348512862"
+      },
+      "conditions": "!$colaborador",
+      "dialog_node": "node_7_1618348588067",
+      "previous_sibling": "node_1_1618348512862"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_9_1618303577929",
+      "conditions": "true",
+      "dialog_node": "node_7_1618348592634",
+      "previous_sibling": "node_7_1618348588067"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informe a não-conformidade:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1618658581515",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_1_1618659535259"
+      },
+      "conditions": "!$causa",
+      "dialog_node": "node_7_1618664468520",
+      "previous_sibling": "node_10_1618661694894"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "RNC aberta para a peça $peca_nome, item $numero_item. Causa: $causa."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1618658581515",
+      "conditions": "true",
+      "dialog_node": "node_8_1618659963587",
+      "previous_sibling": "node_7_1618664468520"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_4_1618658581515",
+      "context": {
+        "causa": "<? @rnc_causas.literal ?>"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_3_1618662216002"
+      },
+      "conditions": "@rnc_causas",
+      "dialog_node": "node_8_1618664336618",
+      "previous_sibling": "node_10_1618662164017"
+    },
+    {
+      "type": "frame",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "meio": "$meio"
+          },
+          "result_variable": "webhook_result_3"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1618670525894"
+      },
+      "conditions": "#definir_borracha",
+      "dialog_node": "node_9_1618303552344",
+      "previous_sibling": "node_9_1618303577929"
+    },
+    {
+      "type": "standard",
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#saldo_ferias",
+      "dialog_node": "node_9_1618303577929",
+      "previous_sibling": "node_5_1618303077368"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para qual departamento ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1618303077368",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1618303166507"
+      },
+      "conditions": "!$departamento",
+      "dialog_node": "node_9_1618306087939",
+      "previous_sibling": "node_7_1618347992938"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok! Qualquer coisa é só me chamar."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#despedida",
+      "dialog_node": "node_9_1618349608125",
+      "previous_sibling": "node_3_1618216313066"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Seu saldo de férias é de $webhook_result_2.saldo_ferias dias."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1618348512862",
+      "context": {
+        "colaborador": "<? @ferias.literal ?>"
+      },
+      "conditions": "$webhook_result_2",
+      "dialog_node": "response_10_1618444706032",
+      "previous_sibling": "slot_6_1618444706793"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Olá $webhook_result_1.nome"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1618303171355",
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_1_1618434794212",
+      "previous_sibling": "slot_6_1618437091690"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$webhook_result_3.borracha"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1618303552344",
+      "conditions": "$webhook_result_3",
+      "dialog_node": "response_1_1618665041780",
+      "previous_sibling": "slot_5_1618665042799"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Erro ao buscar saldo de ferias."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1618348512862",
+      "conditions": "anything_else",
+      "dialog_node": "response_2_1618444707725",
+      "previous_sibling": "response_10_1618444706032"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá, como posso te ajudar hoje ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1618216313066",
+      "conditions": "anything_else",
+      "dialog_node": "response_3_1618216486777",
+      "previous_sibling": "response_7_1618216362437"
+    },
+    {
+      "type": "response_condition",
+      "parent": "node_9_1618303552344",
+      "conditions": "anything_else",
+      "dialog_node": "response_6_1618665727294",
+      "previous_sibling": "response_1_1618665041780"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "@saudacao_formal pra você também."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1618216313066",
+      "conditions": "@saudacao_formal",
+      "dialog_node": "response_7_1618216362437"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Erro ao buscar cadastro."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1618303171355",
+      "conditions": "anything_else",
+      "dialog_node": "response_8_1618434794659",
+      "previous_sibling": "response_1_1618434794212"
+    },
+    {
+      "type": "response_condition",
+      "parent": "node_1_1618303171355",
+      "conditions": "$action_result_1",
+      "dialog_node": "response_8_1618437092591",
+      "previous_sibling": "response_8_1618434794659"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1618659535259",
+      "variable": "$peca_item",
+      "dialog_node": "slot_1_1618661389127"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1618303552344",
+      "variable": "$meio",
+      "dialog_node": "slot_5_1618665042799",
+      "previous_sibling": "handler_1_1618665042296"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1618303171355",
+      "variable": "$cadastro",
+      "dialog_node": "slot_6_1618437091690"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1618348512862",
+      "variable": "$cadastro",
+      "dialog_node": "slot_6_1618444706793"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "service-desk",
+  "language": "pt-br",
+  "description": ""
+}
